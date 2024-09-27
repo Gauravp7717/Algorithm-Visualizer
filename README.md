@@ -26,10 +26,10 @@ Check out the live demo of the project here: [Live Demo](#)
 2. then just run the code .
 
 ## the visualization of Project 
-![Screenshot 2024-09-27 153212](https://github.com/user-attachments/assets/a682e205-b6d1-4dd9-8d73-7145e0c113c1)
-![Screenshot 2024-09-27 153226](https://github.com/user-attachments/assets/3839049c-fc00-41bf-8e82-ea3f3308fc69)
-![Screenshot 2024-09-27 153241](https://github.com/user-attachments/assets/05d453ab-6d2c-44e5-bf71-b4ee78ba8507)
-![Screenshot 2024-09-27 153311](https://github.com/user-attachments/assets/b017480c-171f-4028-aabe-9f191439d6b4)
+![Screenshot 2024-09-27 153311](https://github.com/user-attachments/assets/4383cbf0-790d-45a4-b081-fb2def65c9e9)
+![Screenshot 2024-09-27 153241](https://github.com/user-attachments/assets/a5c1c507-3e9e-48d7-ab58-7b61898d50ec)
+![Screenshot 2024-09-27 153226](https://github.com/user-attachments/assets/b3abac41-8060-406c-bfb1-222a7cbdd246)
+![Screenshot 2024-09-27 153212](https://github.com/user-attachments/assets/88fd66f8-feec-4879-aeb8-9a0cb4d73ec1)
 
 
 
