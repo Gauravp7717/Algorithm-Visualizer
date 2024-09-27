@@ -11,7 +11,7 @@ An interactive web-based tool to visualize fundamental searching and sorting alg
   - **Tailwind CSS** for clean, responsive design.
 
 ## 🖥️ Live Demo
-Check out the live demo of the project here: [Live Demo](#https://gauravp7717.github.io/Algorithm-Visualizer/)
+Check out the live demo of the project here: [Live Demo](https://gauravp7717.github.io/Algorithm-Visualizer/)
 
 ## 📂 Project Structure
 - **index.html**: The home page for algorithm selection.
