@@ -16,8 +16,6 @@ BubbleSortButton.addEventListener('click', async function () {
     disableSizeSlider();
     disableNewArrayBtn();
     await BubbleSort();
-    // enableSortingBtn();
-    // enableSizeSlider();
     enableNewArrayBtn();
 })
 
@@ -40,9 +38,6 @@ async function BubbleSort() {
 
             element[j].style.background = 'rgb(245, 212, 24)';
             element[j + 1].style.background = 'rgb(245, 212, 24)';
-            // element[j].style.background = 'cyan';
-            // element[j + 1].style.background = 'cyan';
-
         }
         element[element.length - 1 - i].style.background = 'rgb(0,255,0)';
         
