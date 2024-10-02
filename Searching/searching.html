@@ -102,37 +102,37 @@
                     <pre id="code_java" style="font-family: 'Poppins', sans-serif;
                     font-size: 15px;
                     letter-spacing: 3px;">
-                        <code class="language-java">// Java code for linearly searching x in arr[]. If x
-                                // is present then return its location, otherwise
-                                // return -1 
-
-                                class GFG {
-                                    public static int search(int arr[], int x) 
-                                    {
-                                        int N = arr.length;
-                                        for (int i = 0; i < N; i++) {
-                                            if (arr[i] == x)
-                                                return i;
-                                        }
-                                                                           return -1;
+                        <code class="language-java">`#include <iostream>
+                            using namespace std;
+                            
+                            class GFG {
+                            public:
+                                // Function to perform linear search
+                                int search(int arr[], int N, int x) {
+                                    for (int i = 0; i < N; i++) {
+                                        if (arr[i] == x)
+                                            return i;
                                     }
-
-                                    // Driver's code
-                                    public static void main(String args[])
-                                    {
-                                        int arr[] = { 2, 3, 4, 10, 40 };
-                                        int x = 10;
-                                    
-                                        // Function call
-                                        int result = search(arr, x);
-                                        if (result == -1)
-                                            System.out.print(
-                                                "Element is not present in array");
-                                        else
-                                            System.out.print("Element is present at index "
-                                                            + result);
-                                    }
-                                    }
+                                    return -1;
+                                }
+                            };
+                            
+                            int main() {
+                                GFG gfg;
+                                int arr[] = {2, 3, 4, 10, 40};
+                                int x = 10;
+                                int N = sizeof(arr) / sizeof(arr[0]);
+                            
+                                // Function call
+                                int result = gfg.search(arr, N, x);
+                                if (result == -1)
+                                    cout << "Element is not present in array" << endl;
+                                else
+                                    cout << "Element is present at index " << result << endl;
+                            
+                                return 0;
+                            }
+                            `
                                 </code>
                             </pre>
                 </div>

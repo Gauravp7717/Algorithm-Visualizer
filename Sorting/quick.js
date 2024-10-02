@@ -38,14 +38,12 @@ async function descriptionText_quick() {
 
     const code = document.querySelector('#code_java')
     // console.log(code.innerHTML)
-    code.innerHTML = `// Java implementation of QuickSort
-import java.io.*;
-
-class GFG {
+    code.innerHTML = `// C++ implementation of QuickSort
+#include <iostream>
+using namespace std;
 
 // A utility function to swap two elements
-static void swap(int[] arr, int i, int j)
-{
+void swap(int* arr, int i, int j) {
     int temp = arr[i];
     arr[i] = arr[j];
     arr[j] = temp;
@@ -54,27 +52,23 @@ static void swap(int[] arr, int i, int j)
 /* This function takes last element as pivot, places
 the pivot element at its correct position in sorted
 array, and places all smaller (smaller than pivot)
-to left of pivot and all greater elements to right
-of pivot */
-static int partition(int[] arr, int low, int high)
-{
+to the left of pivot and all greater elements to
+the right of pivot */
+int partition(int* arr, int low, int high) {
 
     // pivot
     int pivot = arr[high];
 
-    // Index of smaller element and
-    // indicates the right position
+    // Index of smaller element and indicates the right position
     // of pivot found so far
     int i = (low - 1);
 
     for (int j = low; j <= high - 1; j++) {
 
-        // If current element is smaller
-        // than the pivot
+        // If current element is smaller than the pivot
         if (arr[j] < pivot) {
 
-            // Increment index of
-            // smaller element
+            // Increment index of smaller element
             i++;
             swap(arr, i, j);
         }
@@ -84,68 +78,77 @@ static int partition(int[] arr, int low, int high)
 }
 
 /* The main function that implements QuickSort
-        arr[] --> Array to be sorted,
-        low --> Starting index,
-        high --> Ending index
-*/
-static void quickSort(int[] arr, int low, int high)
-{
+    arr[] --> Array to be sorted,
+    low --> Starting index,
+    high --> Ending index */
+void quickSort(int* arr, int low, int high) {
     if (low < high) {
 
-        // pi is partitioning index, arr[p]
-        // is now at right place
+        // pi is partitioning index, arr[pi] is now at the right place
         int pi = partition(arr, low, high);
 
-        // Separately sort elements before
-        // partition and after partition
+        // Separately sort elements before and after partition
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
     }
 }
 
 // Function to print an array
-static void printArray(int[] arr, int size)
-{
+void printArray(int* arr, int size) {
     for (int i = 0; i < size; i++)
-        System.out.print(arr[i] + " ");
-
-    System.out.println();
+        cout << arr[i] << " ";
+    cout << endl;
 }
 
 // Driver Code
-public static void main(String[] args)
-{
-    int[] arr = { 10, 7, 8, 9, 1, 5 };
-    int n = arr.length;
+int main() {
+    int arr[] = {10, 7, 8, 9, 1, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
 
     quickSort(arr, 0, n - 1);
-    System.out.println("Sorted array: ");
+    cout << "Sorted array: " << endl;
     printArray(arr, n);
+
+    return 0;
 }
-}
+
 
 
 
 `
     const time = document.querySelector('#time')
-    time.innerHTML = `Worst Case: The worst case occurs when the partition process always picks the greatest or smallest element as the pivot.
-If we consider the above partition strategy where the last element is always picked as a pivot, the worst case would occur when the array is already sorted in increasing or decreasing order. 
-Following is recurrence for the worst case.  
+    time.innerHTML = `Worst Case: The worst case occurs 
+    when the partition process always picks 
+    the greatest or smallest element as the pivot.
+    If we consider the above partition strategy 
+    where the last element is always picked as a pivot,
+     the worst case would occur when the array 
+     is already sorted in increasing or decreasing order. 
+    Following is recurrence for the worst case.  
 
-Best Case:
-The best case occurs when the partition process always picks the middle element as the pivot. 
-The following is recurrence for the best case.
+    Best Case:
+    The best case occurs when the
+    partition process always picks
+    the middle element as the pivot. 
+    he following is recurrence for the best case.
 
-Average Case: 
-To do average case analysis, we need to consider all possible permutation of array and calculate time taken by every permutation which doesn’t look easy. 
-We can get an idea of average case by considering the case when partition puts O(n/9) elements in one set and O(9n/10) elements in other set. 
-Following is recurrence for this case.
+    verage Case: 
+    o do average case analysis, we need 
+    o consider all possible permutation
+    of array and calculate time taken 
+    by every permutation which doesn’t look easy. 
+    e can get an idea of average case
+    by considering the case when partition
+     puts O(n/9) elements in one set and O(9n/10) elements in other set. 
+    ollowing is recurrence for this case.
 `
 
     const space = document.querySelector('#space')
     space.innerHTML = `Space cmplexity : O(N)
 
-as we are not creating any container other then given array therefore Space complexity will be in order of N
+    as we are not creating any container
+     other then given array therefore 
+     Space complexity will be in order of N
      `
 }
 

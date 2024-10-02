@@ -630,6 +630,8 @@ ion-icon {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    overflow: auto;
+
 }
 
 .code:hover {
@@ -641,6 +643,8 @@ ion-icon {
 #code_java {
     width: 54vw;
     height: 68vh;
+    overflow: auto;
+
 }
 
 .selectedPane {
@@ -683,6 +687,8 @@ ion-icon {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: auto;
+
 }
 
 .timeComplexity:hover,
@@ -690,6 +696,8 @@ ion-icon {
     box-shadow: -1px 5px 50px 0px rgba(255, 255, 255, 0.87);
     width: 100.8%;
     height: 100.8%;
+    overflow: auto;
+
 }
 
 #time {

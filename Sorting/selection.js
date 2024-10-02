@@ -33,65 +33,70 @@ async function descriptionText_selection() {
 
     const code = document.querySelector('#code_java')
     // console.log(code.innerHTML)
-    code.innerText = `// Java program for implementation of Selection Sort
-import java.io.*;
-public class SelectionSort
-{
-void sort(int arr[])
-{
-    int n = arr.length;
+    code.innerText = `// C++ program for implementation of Selection Sort
+#include <iostream>
+using namespace std;
 
-    // One by one move boundary of unsorted subarray
-    for (int i = 0; i < n-1; i++)
-    {
-        // Find the minimum element in unsorted array
-        int min_idx = i;
-        for (int j = i+1; j < n; j++)
-            if (arr[j] < arr[min_idx])
-                min_idx = j;
+class SelectionSort {
+public:
+    void sort(int arr[], int n) {
+        // One by one move the boundary of unsorted subarray
+        for (int i = 0; i < n - 1; i++) {
+            // Find the minimum element in unsorted array
+            int min_idx = i;
+            for (int j = i + 1; j < n; j++)
+                if (arr[j] < arr[min_idx])
+                    min_idx = j;
 
-        // Swap the found minimum element with the first
-        // element
-        int temp = arr[min_idx];
-        arr[min_idx] = arr[i];
-        arr[i] = temp;
+            // Swap the found minimum element with the first element
+            int temp = arr[min_idx];
+            arr[min_idx] = arr[i];
+            arr[i] = temp;
+        }
     }
-}
 
-// Prints the array
-void printArray(int arr[])
-{
-    int n = arr.length;
-    for (int i=0; i<n; ++i)
-        System.out.print(arr[i]+" ");
-    System.out.println();
-}
+    // Prints the array
+    void printArray(int arr[], int n) {
+        for (int i = 0; i < n; i++)
+            cout << arr[i] << " ";
+        cout << endl;
+    }
+};
 
 // Driver code to test above
-public static void main(String args[])
-{
-    SelectionSort ob = new SelectionSort();
-    int arr[] = {64,25,12,22,11};
-    ob.sort(arr);
-    System.out.println("Sorted array");
-    ob.printArray(arr);
-}
-}
+int main() {
+    SelectionSort ob;
+    int arr[] = {64, 25, 12, 22, 11};
+    int n = sizeof(arr) / sizeof(arr[0]);
     
+    ob.sort(arr, n);
+    cout << "Sorted array" << endl;
+    ob.printArray(arr, n);
+
+    return 0;
+}
+
     
 `
     const time = document.querySelector('#time')
-    time.innerHTML = `<b>Time Complexity:</b> The time complexity of Selection Sort is O(N2) as there are two nested loops:
-
-⭐One loop to select an element of Array one by one = O(N)
-⭐Another loop to compare that element with every other Array element = O(N)
-
-Therefore overall complexity = O(N) * O(N) = O(N*N) = O(N2)
+    time.innerHTML = `<b>Time Complexity:</b> The time
+     complexity of Selection Sort is O(N2) 
+     as there are two nested loops:
+    ⭐One loop to select an element of 
+    Array one by one = O(N)
+    ⭐Another loop to compare that 
+    element with every other Array element = O(N)
+Therefore overall complexity = O(N) * O(N) 
+                            = O(N*N) = O(N2)
 `
 
     const space = document.querySelector('#space')
-    space.innerHTML = `<b>Auxiliary Space:</b> O(1) as the only extra memory used is for temporary variables while swapping two values in Array. 
-The selection sort never makes more than O(N) swaps and can be useful when memory write is a costly operation. `
+    space.innerHTML = `<b>Auxiliary Space:</b> O(1) as 
+    the only extra memory used is for temporary
+     variables while swapping two values in Array. 
+    The selection sort never makes more than O(N)
+    swaps and can be useful when memory 
+    write is a costly operation. `
 
 
 }

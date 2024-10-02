@@ -668,12 +668,16 @@ ion-icon{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: auto;
+
 }
 
 .timeComplexity:hover,.spaceComplexity:hover{
     box-shadow: -1px 5px 50px 0px rgba(255, 255, 255, 0.87);
     width: 100.8%;
     height: 100.8%;
+    overflow: auto;
+
 }
 #time{
     width: 36vw;
