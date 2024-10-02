@@ -44,6 +44,6 @@ async function BubbleSort() {
     }
     element[0].style.background = 'rgb(0,255,0)';
     done.play()
-    selectText.innerHTML=`Sorting Complete!`
+    // selectText.innerHTML=`Sorting Complete!`
 
 } 

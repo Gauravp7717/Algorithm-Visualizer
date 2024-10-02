@@ -628,6 +628,9 @@ ion-icon{
 #code_java{
     width: 54vw;
     height: 68vh;
+    border: 1px solid #ccc;  /* Optional: Add a border for visibility */
+    padding: 10px;       /* Optional: Add padding inside the container */
+    overflow: auto;
 }
 .selectedPane{
     background-color: rgba(61, 78, 193, 0.55);

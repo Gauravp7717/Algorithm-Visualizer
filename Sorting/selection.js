@@ -97,15 +97,6 @@ The selection sort never makes more than O(N) swaps and can be useful when memor
 }
 
 
-
-
-
-
-
-
-
-
-
 async function SelectionSort() {
     const element = document.querySelectorAll(".bar");
     for (let i = 0; i < element.length; i++) {

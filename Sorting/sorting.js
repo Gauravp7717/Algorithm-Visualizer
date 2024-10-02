@@ -51,7 +51,7 @@ delayElement.addEventListener('input', function () {
     selectText.innerHTML = `Speed Changed`
     speedOutput.innerHTML = this.value
     delay = 525 - parseInt(100*this.value);
-});
+}); 
 
 // create a new empty array to store randomly generated array sizes
 let array = [];
